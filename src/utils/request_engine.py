@@ -3,11 +3,9 @@ import os
 from requests.adapters import HTTPAdapter
 import requests
 from requests.auth import HTTPBasicAuth
-
-username = "sanemeroglu"
-
-
-# password= #gettoken
+from src.utils import config_parser
+username = config_parser.get_git_config("username")
+password= config_parser.get_git_config("password")
 class RequestEngine(object):
     def request_sender(self, url_link, request_type, params=None, headers=None, body_params=None):
         response = ""
