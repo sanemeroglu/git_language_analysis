@@ -13,7 +13,6 @@ def update_language_statistic(language):
     else:
         language_statistics[language] += 1
 
-
 if __name__ == '__main__':
     git_api = GitApi()
     username=input("Enter username: ")
